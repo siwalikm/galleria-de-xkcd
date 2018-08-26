@@ -1,5 +1,12 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1>Welcome to XKCD Gallery</h1>
+<div id="counter">showing {{model.length}} comics from XKCD archive</div>
 
-{{outlet}}
+{{log model}}
+<div class="imageContainer">
+    {{#each model as |rental|}}
+        <div class="img" title={{rental.alt}}>
+            <img name={{rental.id}} src={{rental.img}}><br>
+                        <label for={{rental.id}}>{{rental.title}}</label>
+            </div>
+    {{/each}}
+</div>
