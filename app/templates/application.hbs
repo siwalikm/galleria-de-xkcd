@@ -1,7 +1,7 @@
 <h1>Welcome to XKCD Gallery</h1>
 <div id="counter">showing {{model.length}} comics from XKCD archive</div>
 
-{{log model}}
+{{#if model}}
 <div class="imageContainer">
     {{#each model as |rental|}}
         <div class="img" title={{rental.alt}}>
@@ -9,4 +9,9 @@
                         <label for={{rental.id}}>{{rental.title}}</label>
             </div>
     {{/each}}
+     {{#infinite-scroll action="loadMore"}}
+         <span class="loading">Wow ~ You're a scroller. Loading more comics.</span>
+     {{/infinite-scroll}}
 </div>
+{{/if}}
+
