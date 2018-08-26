@@ -1,7 +1,7 @@
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd xxx`
+* `git clone git@github.com:siwalikm/galleria-de-xkcd.git` this repository
+* `cd galleria-de-xkcd`
 * `npm install`
 
 ## Running / Development
